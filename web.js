@@ -6,7 +6,6 @@ const
   server = new Hapi.Server();
 
 server.connection({
-  host: config.server.host,
   port: config.server.port
 });
 
