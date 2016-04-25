@@ -1,0 +1,16 @@
+{
+  "name": "chatbot",
+  "version": "0.1.0",
+  "description": "This is just a freaking chatbot for testing",
+  "main": "index.js",
+  "repository": "git@github.com:lordzero0000/chattobotto.git",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cloud FullBuster <lordzero0000@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^13.3.0"
+  }
+}
