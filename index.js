@@ -19,6 +19,14 @@ server.route({
   }
 });
 
+server.route({
+  method: 'GET',
+  path:'/',
+  handler: (res, reply) => {
+    return reply('hello world');
+  }
+});
+
 server.start((err) => {
   if (err) {
     throw err;
