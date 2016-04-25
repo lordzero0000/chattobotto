@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:lordzero0000/chattobotto.git",
   "scripts": {
+    "start": "index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cloud FullBuster <lordzero0000@gmail.com>",
