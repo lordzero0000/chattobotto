@@ -16,7 +16,7 @@ const
 
 server.connection({
   host: process.env.HOST || "localhost",
-  port: process.env.PORT || 8080
+  port: process.env.PORT || 80
 });
 
 server.route([
