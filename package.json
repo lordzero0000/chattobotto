@@ -3,8 +3,15 @@
   "version": "0.1.0",
   "description": "This is just a freaking chatbot for testing",
   "main": "web.js",
-  "repository": "git@github.com:lordzero0000/chattobotto.git",
+  "repository": {
+    "type": "git",
+    "url":"git@github.com:lordzero0000/chattobotto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lordzero0000/chattobotto/issues"
+  },
   "scripts": {
+    "start": "node web.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cloud FullBuster <lordzero0000@gmail.com>",
