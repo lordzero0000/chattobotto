@@ -16,7 +16,7 @@ const
 
 server.connection({
   host: "localhost",
-  port: 80
+  port: 8080
 });
 
 server.route([
