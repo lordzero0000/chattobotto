@@ -1,5 +1,6 @@
 {
   "server": {
+    "host": "chattobotto.herokuapp.com",
     "port": 8080
   }
 }
