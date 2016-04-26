@@ -3,7 +3,7 @@
 const
   Hapi = require('hapi'),
   config = require('./config'),
-  server = new Hapi.Server(),
+  server = new Hapi.Server(process.env.PORT || 80, '0.0.0.0'),
   internals = {
     home: (resquest, reply) => {
       return reply("Success!");
@@ -14,10 +14,10 @@ const
     }
   };
 
-server.connection({
-  host: config.server.host,
-  port: config.server.port
-});
+// server.connection({
+//   host: config.server.host,
+//   port: config.server.port
+// });
 
 server.route([
   { method: 'POST', path: '/message', handler: internals.message },
