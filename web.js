@@ -14,10 +14,7 @@ const
     }
   };
 
-server.connection({
-  host: "localhost",
-  port: 8080
-});
+server.connection({ port: 80 });
 
 server.route([
   { method: 'POST', path: '/message', handler: internals.message },
