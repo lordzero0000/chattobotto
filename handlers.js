@@ -3,6 +3,6 @@ module.exports = {
     res.send('Hello World!');
   },
   message: (req, res) => {
-    res.send(req.body.hub.challenge);
+    res.send(req.query["hub.challenge"]);
   }
 };
