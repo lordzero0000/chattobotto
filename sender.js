@@ -1,6 +1,6 @@
 const
   URL = process.env.FB_API || 'https://graph.facebook.com/v2.6/me/messages',
-  TOKEN = process.env.TOKEN || 'EAAOpGLrqkSQBAKFteJ0YbxxDFVunWNgE7VlukD8jaMKmAZBI1VYqASfGkcaLyZCBc3Pir3pwwPJb6qBOSn58HcRKo1H2mKHAzsdnTGSpJh1as2BfpzPZAzuwApY6e7X7QiXMTteKzR3uNAOABsSdXeetZC0h0kU9RGX7UGTIoAZDZD',
+  TOKEN = process.env.TOKEN,
   API = URL + '?access_token=' + TOKEN;
 
 let
