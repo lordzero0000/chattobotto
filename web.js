@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', handler.main);
-app.post('/message', handler.message);
+app.get('/message', handler.message);
 
 app.listen(port, () => {
   console.log('Example app listening on port ' + port + '!');
