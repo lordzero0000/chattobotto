@@ -5,7 +5,7 @@
   "main": "web.js",
   "repository": {
     "type": "git",
-    "url":"git@github.com:lordzero0000/chattobotto.git"
+    "url": "git@github.com:lordzero0000/chattobotto.git"
   },
   "bugs": {
     "url": "https://github.com/lordzero0000/chattobotto/issues"
@@ -17,6 +17,7 @@
   "author": "Cloud FullBuster <lordzero0000@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "hapi": "^13.3.0"
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
   }
 }

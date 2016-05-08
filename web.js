@@ -1,29 +1,18 @@
 'use strict';
 
 const
-  Hapi = require('hapi'),
-  config = require('./config'),
-  server = new Hapi.Server(),
-  internals = {
-    home: (resquest, reply) => {
-      return reply("Success!");
-    },
-    message: (res, reply) => {
-      console.log(res.payload);
-      return reply('hello world');
-    }
-  };
+  express = require('express'),
+  bodyParser = require('body-parser'),
+  app = express(),
+  handler = require('./handlers'),
+  port = process.env.PORT || 3000;
 
-server.connection({ port: 80 });
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-server.route([
-  { method: 'POST', path: '/message', handler: internals.message },
-  { method: 'GET', path: '/', handler: internals.home}
-]);
+app.get('/', handler.main);
+app.post('/message', handler.message);
 
-server.start((err) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log('Server running at:', server.info.uri);
+app.listen(port, () => {
+  console.log('Example app listening on port ' + port + '!');
 });
