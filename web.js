@@ -1,13 +1,15 @@
 'use strict';
 
-const
-  PORT = process.env.PORT || 3000;
-
 let
   express = require('express'),
   bodyParser = require('body-parser'),
-  handler = require('./handlers'),
+  handler = require('./lib/handlers'),
+  fs = require('fs'),
+  config = JSON.parse(fs.readFileSync('./config.json')),
   app = express();
+
+const
+  PORT = config.port || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
