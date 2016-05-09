@@ -9,7 +9,7 @@ let
   app = express();
 
 const
-  PORT = config.port || 80;
+  PORT = process.env.PORT || 80;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
